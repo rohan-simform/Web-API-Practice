@@ -1,0 +1,45 @@
+body {
+    background: #f4f4f4;
+    margin: 0;
+    padding: 30px;
+}
+h1 {
+    text-align: center;
+}
+#posts {
+    max-width: 900px;
+    margin: auto;
+}
+.post-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.post-body {
+    margin-bottom: 15px;
+    color: #555;
+}
+.tags {
+    margin-bottom: 10px;
+}
+.tag {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #666;
+}
