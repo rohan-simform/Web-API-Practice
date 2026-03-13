@@ -3,6 +3,7 @@ $(function () {
         url: "https://dummyjson.com/posts",
         method: "GET",
         success: function (res) {
+            let cards ="";
             $.each(res.posts, function (i, post) {
                 const title = post.title ?? "No title";
                 const body = post.body ?? "No content available";
@@ -15,8 +16,7 @@ $(function () {
                 const tags = post.tags?.length
                     ? `<div class="tags">${post.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>`
                     : "";
-
-
+                    
                 const card = 
                 `<div class="post-card">
                     <div class="post-title">${title}</div>
@@ -29,8 +29,9 @@ $(function () {
                         <span>User: ${userId}</span>
                     </div>
                 </div>`;
-                $("#posts").append(card);
-            })
+                cards = cards.concat(card);
+            });
+            $("#posts").html(cards);
         },
         error: function (err) {
             $("#status").text("Failed to load posts");
